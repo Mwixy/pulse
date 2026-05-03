@@ -1,5 +1,6 @@
 <div align="center">
   <img src="examples/logo1.png" width="150" alt="Pulse Logo">
+  <img src="examples/logo.png" width="150" alt="Pulse Script Logo">
   <h1>The Pulse Programming Language</h1>
   <p><i>A lightweight, block-scoped scripting language designed for ultra-fast GUI prototyping and native Python interoperability.</i></p>
 </div>
