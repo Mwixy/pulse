@@ -7,7 +7,7 @@
 
 ---
 
-## ⚡ What is Pulse?
+## What is Pulse?
 
 **Pulse** (`.pulse`) is a completely new programming language built around a Python interpreter. It abstracts away complex UI frameworks and heavy boilerplate, letting you build functional desktop applications in seconds. 
 
@@ -19,7 +19,7 @@
 
 ---
 
-## 🚀 Installation
+## Installation
 
 Pulse comes with an incredibly robust, interactive installer for Windows. 
 
@@ -34,7 +34,7 @@ Pulse comes with an incredibly robust, interactive installer for Windows.
 
 ---
 
-## 💻 Quick Start
+## Quick Start
 
 Once installed, there are two ways to run Pulse scripts:
 
@@ -49,7 +49,7 @@ pulse run .\examples\gui_input_example.pulse
 
 ---
 
-## 📖 A Taste of Pulse
+## A Taste of Pulse
 
 Here is an example of a complete desktop application built in less than 20 lines of code:
 
@@ -76,7 +76,7 @@ end
 
 ---
 
-## 📚 Complete Documentation
+## Complete Documentation
 
 Want to learn more about Pulse?
 
