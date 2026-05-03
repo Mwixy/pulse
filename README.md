@@ -77,6 +77,6 @@ end
 
 ## 📚 Complete Documentation
 
-Want to learn how to use Python's `math` library, or how to dynamically update images, or create repeating loops?
+Want to learn more about Pulse?
 
 Check out the full **[Pulse Programming Language: The Complete Guide](pulse_docs.md)** which details every single syntax rule, GUI element, and feature of the language!
