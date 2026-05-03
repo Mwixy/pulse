@@ -22,6 +22,25 @@ pulse run .\path\to\your\file.pulse
 
 Pulse has a very simple syntax without strict indentation rules. Every block begins with a colon `:` and closes with the keyword `end`.
 
+### Block Example
+```pulse
+let number = 1 !! Makes a global variable nambed number that is set to 1.
+until 1 == 5: !! Repeats code that is inside "until" and "end" until number variable is 5.
+    let(number) !! Imports the global number variable to this block.
+    let number = number + 1 !! updates global number variable
+    print (number) !!prints the number
+end
+```
+and
+```pulse
+let number = 1 !! Makes a global variable nambed number that is set to 1.
+until 1 == 5: !! Repeats code that is inside "until" and "end" until number variable is 5.
+let(number) !! Imports the global number variable to this block.
+let number = number + 1 !! updates global number variable
+print (number) !!prints the number
+end
+```
+Do the exact same thing! (As indentation does not matter)
 ### Comments
 Comments begin with `!!` and extend to the end of the line.
 
