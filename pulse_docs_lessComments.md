@@ -72,7 +72,7 @@ Variable scoping is one of Pulse's most unique features. There are **Globals** a
 The `let` keyword *always* creates or modifies a **Global Variable**, no matter where it is used.
 
 ```pulse
-let counter = 0 !! Global variable
+let counter = 0
 ```
 
 ### Local Variables (`name = value`)
@@ -167,16 +167,9 @@ end
 Pulse can call *any* Python module, standard library, or built-in function dynamically using the `py.` prefix. You do not need to write wrapper code.
 
 ```pulse
-!! Generate a random integer
 let lucky_number = py.random.randint(1, 100)
-
-!! Get python's current time
 let current_time = py.time.ctime()
-
-!! Use python's type casting
 let as_string = py.str(lucky_number)
-
-!! Use python's math module
 let square_root = py.math.sqrt(16)
 ```
 
