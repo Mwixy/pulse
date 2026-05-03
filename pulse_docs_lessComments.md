@@ -1,4 +1,4 @@
-# Pulse Programming Language: The Complete Guide
+# Pulse Programming Language: The Complete Guide With Less Comments
 
 Welcome to the definitive documentation for **Pulse** (`.pulse`), a lightweight, block-scoped programming language with native Python interoperability and an extremely powerful, declarative GUI engine.
 
