@@ -1,0 +1,9 @@
+let x = 10
+
+func test():
+x = 5
+end
+
+test()
+print(x)
+

@@ -1,0 +1,62 @@
+!! Full GUI Features Example
+let name = ""
+let greeting = "Type your name and press the button!"
+let log_text = "Greeting Log:\n"
+let clock_time = "Loading clock..."
+let status = ""
+
+every 1:
+    let(clock_time)
+    let clock_time = "Current Time: " + py.time.ctime()
+    update(clock_time)
+end
+
+func do_greet():
+    let(name)
+    let(greeting)
+    let(log_text)
+    let(status)
+    
+    let lucky_number = py.random.randint(1, 100)
+    let greeting = "Hello, " + name + "! Your lucky number is " + py.str(lucky_number)
+    update(greeting)
+    
+    let log_text = log_text + "Greeted " + name + " (Lucky #: " + py.str(lucky_number) + ")\n"
+    update(log_text)
+    
+    let status = "Greeting created! (Disappearing in 3s)"
+    update(status)
+    
+    after 3:
+        let(status)
+        let status = ""
+        update(status)
+    end
+end
+
+window "Pulse Features Demo" width=500 height=450 bg="white":
+    !! Live clock
+    let(clock_time)
+    Label clock_time font="Arial 10 italic" color="gray" bg="white" pady=5
+    
+    Label "Enter your name:" font="Arial 14" bg="white" pady=10
+    
+    !! Input
+    Entry "name" font="Arial 14" bg="lightgray"
+    
+    !! Action Button
+    Button "Generate Greeting!"(do_greet) bg="lightblue" font="Arial 12" pady=10:
+    end
+    
+    !! Greeting Output
+    let(greeting)
+    Label greeting font="Arial 16 bold" color="green" bg="white" pady=10
+    
+    !! Status label that clears after 3 seconds
+    let(status)
+    Label status font="Arial 10" color="red" bg="white"
+    
+    !! Multi-line Log
+    let(log_text)
+    Text "log_text" font="Arial 12" bg="lightyellow" width=40 height=8 pady=10
+end

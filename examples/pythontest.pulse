@@ -1,0 +1,13 @@
+!! Pulse example: calling Python functions
+let x = 16
+let result = 0
+
+func test_sqrt():
+    let(x)                          !! import global x into local
+    let(result)                      !! import global result to modify
+    let result = py.math.sqrt(x)     !! call Python function
+end
+
+test_sqrt()
+print("Square root of", x, "is", result)
+print("Global result is:", result)

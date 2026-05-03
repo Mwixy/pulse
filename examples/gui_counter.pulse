@@ -1,0 +1,23 @@
+!! Global counter
+let counter = 0
+
+!! Function to increment
+func increment():
+let(counter)
+let counter = counter + 1
+print("Button pressed:", counter)
+end
+
+window "Counter App":
+    Label "Press the button to increment counter"
+
+    Button "Click me"(increment):
+    end
+
+    Button "Reset":
+        let(counter)
+        let counter = 0
+        print("Counter reset")
+    end
+end
+

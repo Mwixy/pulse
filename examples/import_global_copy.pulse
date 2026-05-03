@@ -1,0 +1,11 @@
+let x = 10
+
+func test():
+let(x)
+print(x)
+x = 99
+end
+
+test()
+print(x)
+

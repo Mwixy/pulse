@@ -1,0 +1,9 @@
+let x = 10
+
+func change():
+let x = 20
+end
+
+change()
+print(x)
+

@@ -1,0 +1,33 @@
+!! A Modern Dark-Mode Dashboard
+let status = "Pulse Clock"
+let time_now = "00:00:00"
+
+func update_clock():
+    let(time_now)
+    let time_now = py.time.strftime("%H:%M:%S")
+    update(time_now)
+end
+
+window "Pulse Clock" width=400 height=250 bg="#1A1A1B":
+    let(status)
+    let(time_now)
+
+    !! Header Section
+    Label "DASHBOARD" font="Impact 24" color="#00FF9C" bg="#1A1A1B" pady=20
+    
+    !! Visual Separator
+    Label "________________________________" color="#333D42" bg="#1A1A1B"
+
+    !! Stats Block
+    Label time_now font="Consolas 36 bold" color="white" bg="#1A1A1B" pady=10
+    Label status font="Arial 10 italic" color="#878E91" bg="#1A1A1B"
+    
+    !! Spacing
+    Label "" bg="#1A1A1B" pady=20
+
+
+    !! Auto-update the clock every second
+    every 1:
+        update_clock()
+    end
+end

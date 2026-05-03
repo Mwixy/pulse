@@ -1,0 +1,49 @@
+!! Pulse Benchmark: +1 increments in 5 seconds
+
+!! Global counters
+let pulse_counter = 0
+let py_counter = 0
+let py_full = 0
+
+!! ---------------------------
+!! 1️⃣ Pulse-only increment
+!! ---------------------------
+let start = time()
+let elapsed = 0
+until elapsed >= 5:
+    let(start)
+    let(pulse_counter)
+    let pulse_counter = pulse_counter + 1
+    let elapsed = time() - start
+end
+print("Pulse counter:", pulse_counter)
+
+!! ---------------------------
+!! 2️⃣ Python int inside Pulse
+!! ---------------------------
+let start_py = time()
+let elapsed_py = 0
+until elapsed_py >= 5:
+    let(py_full)
+    let(start_py)
+    let(start)
+    let(py_counter)
+    let py_counter = py_counter + py.int(1)
+    let elapsed_py = time() - start_py
+end
+print("Python int in Pulse:", py_counter)
+
+!! ---------------------------
+!! 3️⃣ Full Python benchmark
+!! ---------------------------
+let start_fullpy = py.time.time()
+let elapsed_full = 0
+until elapsed_full >= 5:
+let(py_full)
+    let(start_fullpy)
+    let(start_py)
+    let(start)
+    let py_full = py_full + 1
+    let elapsed_full = py.time.time() - start_fullpy
+end
+print("Full Python counter:", py_full)

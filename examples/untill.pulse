@@ -1,0 +1,7 @@
+let hi = 1
+
+until hi == 5:
+let(hi)          !! imports global hi as local reference
+let hi = hi + 1  !! updates global hi
+print(hi)
+end

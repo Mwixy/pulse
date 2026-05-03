@@ -1,0 +1,33 @@
+!! Global counter
+let counter = 0
+
+!! Increment function
+func increment():
+let(counter)
+let counter = counter + 1
+print("Pressed:", counter)
+update(counter)
+end
+
+window "Counter App" width=400 height=300 bg="lightyellow":
+    Label "Press the button" color="green" bg="white" width=25 height=2 font="Arial 16 bold" padx=5 pady=5
+    let(counter)
+    Label counter
+    Button "Click me"(increment) bg="blue" fg="white" width=20 height=2 font="Arial 14 bold" padx=5 pady=5:
+    end
+
+    Button "Reset":
+        let(counter)
+        let counter = 0
+        print("Counter reset")
+        update(counter)
+    end
+
+    Entry "name" width=30 font="Arial 14" bg="white" fg="black" padx=5 pady=5
+
+    Text "mytext" width=40 height=5 font="Arial 12" bg="lightgrey" fg="black" padx=5 pady=5
+
+    !! Place your own logo.png next to this file for the image to load
+    Image "logo.png" width=100 height=100
+end
+

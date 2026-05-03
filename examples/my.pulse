@@ -1,0 +1,18 @@
+!! This is my first test and hand written code in Pulse!
+
+let Message = ""
+
+func hi():
+print("Hello World!")
+end
+
+window "Hi" width=400 height=300 bg="purple":
+    let(Message)
+Label Message
+Button "Click me":
+    let(Message)
+    print("hello")
+    let Message = "Hi"
+    update(Message)
+end
+end
