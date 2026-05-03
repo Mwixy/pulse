@@ -11,6 +11,10 @@ Pulse files use the `.pulse` extension. You can run them directly from your term
 ```powershell
 py -m pulse run .\path\to\your\file.pulse
 ```
+or
+```powershell
+pulse run .\path\to\your\file.pulse
+```
 
 ---
 
